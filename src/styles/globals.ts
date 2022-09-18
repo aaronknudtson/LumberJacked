@@ -33,7 +33,7 @@ export const colors = {
     "#ffd700",
   ],
   gray: "#536878",
-  background: "#e4e4ff",
+  background: "#f0f8ff",
 };
 
 export const Button = styled.button<any>((props) => ({
@@ -55,3 +55,31 @@ export const Button = styled.button<any>((props) => ({
   font: "inherit",
   fontWeight: 400,
 }));
+
+export const FlexContainer = styled.div<any>((props) => ({
+  display: "flex",
+  flexDirection: props.column && "column",
+  justifyContent: props.justifyContent,
+  alignItems: props.alignItems,
+  width: "100%",
+  gap: props.gap ? props.gap : "10px",
+  margin: props.margin,
+}));
+
+export const Input = styled.input({
+  padding: "1rem 2rem",
+  borderRadius: "100px",
+  border: "1px solid #00000000",
+  width: "100%",
+  maxWidth: "300px",
+  color: colors.primary.darkest,
+  "&:hover, &:focus": {
+    border: `1px solid ${colors.primary.lightest}`,
+    transition: "all 0.5s",
+    outline: "none",
+  },
+  "::placeholder": {
+    color: colors.primary.lightest,
+    opacity: 0.5,
+  },
+});

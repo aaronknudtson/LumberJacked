@@ -38,7 +38,7 @@ export default function Navbar() {
         <Logo src={logo} />
         <Nav>
           {links.map((link) => (
-            <React.Fragment>
+            <React.Fragment key={link.name}>
               <Link to={link.path}>{link.name}</Link>
             </React.Fragment>
           ))}
