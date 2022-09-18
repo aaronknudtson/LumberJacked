@@ -1,0 +1,13 @@
+$primary: #0066ff;
+$secondary: #ffd700;
+$background: #f0f8ff;
+// $background: #fff;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+html,
+body {
+  background-color: $background;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #012590;
+}
